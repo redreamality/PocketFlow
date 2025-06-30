@@ -16,11 +16,10 @@ load_dotenv()
 
 # Add paths for imports
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
-sys.path.insert(0, os.path.dirname(__file__))
 
 from pocketflow import Node, Flow, AsyncNode, AsyncFlow
-from tracing import trace_flow, TracingConfig
-from utils import setup_tracing
+from pocketflow_tracing import trace_flow, TracingConfig
+from pocketflow_tracing.utils import setup_tracing
 
 
 class TestNode(Node):

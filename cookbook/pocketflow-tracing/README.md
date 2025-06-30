@@ -14,10 +14,26 @@ This cookbook provides comprehensive observability for PocketFlow workflows usin
 
 ## 🚀 Quick Start
 
-### 1. Install Dependencies
+### 1. Installation
+
+Install the package using pip:
 
 ```bash
-pip install -r requirements.txt
+pip install pocketflow-tracing
+```
+
+Or install from source:
+
+```bash
+git clone https://github.com/The-Pocket/PocketFlow.git
+cd PocketFlow/cookbook/pocketflow-tracing
+pip install .
+```
+
+For development installation:
+
+```bash
+pip install -e ".[dev]"
 ```
 
 ### 2. Environment Setup
@@ -43,7 +59,7 @@ POCKETFLOW_TRACING_DEBUG=true
 
 ```python
 from pocketflow import Node, Flow
-from tracing import trace_flow
+from pocketflow_tracing import trace_flow
 
 class MyNode(Node):
     def prep(self, shared):

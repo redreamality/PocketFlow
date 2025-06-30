@@ -13,12 +13,11 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 
-# Add parent directory to path to import pocketflow and tracing
+# Add parent directory to path to import pocketflow
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", ".."))
-sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
 from pocketflow import Node, Flow
-from tracing import trace_flow, TracingConfig
+from pocketflow_tracing import trace_flow, TracingConfig
 
 
 class GreetingNode(Node):
